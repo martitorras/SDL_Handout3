@@ -10,9 +10,9 @@
 ModuleTextures::ModuleTextures() : Module()
 {
 	// TODO 5: Initialize all texture pointers to nullptr
-	/*for (int i = 0; i < MAX_TEXTURES; ++i) {
+	for (int i = 0; i < MAX_TEXTURES; ++i) {
 		textures[i] = nullptr;
-	}*/
+	}
 }
 
 // Destructor

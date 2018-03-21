@@ -33,17 +33,20 @@ bool ModuleRender::Init()
 	}
 
 	// TODO 9: load a texture "test.png" to test is everything works well
-
+	tex = App->textures->Load("test.png");
 	return ret;
 }
 
 // Called every draw update
 update_status ModuleRender::PreUpdate()
 {
+	
 	// TODO 7: Clear the screen to black before starting every frame
 	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+
 	SDL_RenderClear(renderer);
 	// TODO 10: Blit our test texture to check functionality
+	if(!Blit(tex, SCREEN_WIDTH / 4, SCREEN_HEIGHT / 4, nullptr)) return update_status::UPDATE_ERROR;
 
 	return update_status::UPDATE_CONTINUE;
 }
